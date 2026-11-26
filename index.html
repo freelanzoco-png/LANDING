@@ -4932,7 +4932,7 @@
   /* USER UPDATE: remove first-page animated photo on mobile/app */
   @media (max-width: 900px) {
     .hero > .hero-bg-layer {
-      display: none !important;
+      display: block !important;
     }
     .hero {
       padding-bottom: 28px !important;
@@ -5498,6 +5498,12 @@ document.addEventListener('click',function(e){var b=e.target.closest('[data-pick
     }
     html body .hero h1 { font-size: clamp(30px, 3vw, 44px); max-width: 42vw; }
     html body .hero h1 .hero-line { white-space: normal; }
+  }
+
+  /* Mobile / tablet: show the hero photo as a card under the headline */
+  @media (max-width: 900px) {
+    html body .hero > .hero-bg-layer { display: block !important; background: #FFFFFF; border: 0; box-shadow: none; }
+    html body .hero .hero-bg-layer img { object-position: 45% center; -webkit-mask-image: none; mask-image: none; }
   }
 </style>
 </body>
