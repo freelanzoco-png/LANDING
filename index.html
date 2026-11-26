@@ -14,7 +14,7 @@
 <meta content="index, follow, max-image-preview:large, max-snippet:-1" name="robots"/>
 <meta content="Bangalore, Karnataka, India" name="geo.placename"/>
 <meta content="IN-KA" name="geo.region"/>
-<meta content="#7C3AED" name="theme-color"/>
+<meta content="#FFFFFF" name="theme-color"/>
 <meta content="Hire Event Staff &amp; Find One Day Event Jobs | Freelanzo" property="og:title"/>
 <meta content="Freelanzo" property="og:site_name"/>
 <meta content="en_IN" property="og:locale"/>
@@ -219,7 +219,7 @@
 
   /* ── HERO ── */
   .hero {
-    background: linear-gradient(160deg, var(--purple-ultra) 0%, #FAF8FF 40%, var(--white) 100%);
+    background: #FFFFFF;
     padding: 32px 5% 32px;
     position: relative;
     overflow: hidden;
@@ -233,7 +233,7 @@
     position: absolute;
     top: -100px; right: -100px;
     width: 500px; height: 500px;
-    background: radial-gradient(circle, rgba(139,92,246,0.12) 0%, transparent 70%);
+    background: none;
     pointer-events: none;
     z-index: 1;
   }
@@ -423,7 +423,7 @@
     padding: 80px 5%;
     border-top: 1px solid var(--gray-line);
     border-bottom: 1px solid var(--gray-line);
-    background: linear-gradient(180deg, #FAF8FF 0%, #FFFFFF 100%);
+    background: #FFFFFF;
   }
 
   .trusted-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
@@ -542,7 +542,7 @@
   }
 
   /* ── FREELANZO WORKS GALLERY ── */
-  .works { background: linear-gradient(180deg, var(--purple-ultra) 0%, var(--white) 100%); }
+  .works { background: #FFFFFF; }
 
   .works-header {
     text-align: center;
@@ -685,7 +685,7 @@
   }
 
   /* ── DISCOVER DAY JOBS ── */
-  .discover { background: var(--gray-bg); }
+  .discover { background: #FFFFFF; }
 
   .discover-tabs {
     display: flex;
@@ -844,7 +844,7 @@
   .why-card p { font-size: 14px; color: var(--gray-mid); line-height: 1.65; }
 
   /* ── TESTIMONIALS ── */
-  .testimonials { background: var(--purple-ultra); }
+  .testimonials { background: #FFFFFF; }
 
   .test-grid {
     display: grid;
@@ -935,7 +935,7 @@
   .how-panel .btn-primary { margin-top: 24px; display: inline-block; text-decoration: none; }
 
   /* ── FREELANCERS ── */
-  .workers { background: var(--gray-bg); }
+  .workers { background: #FFFFFF; }
 
   .workers-grid {
     display: grid;
@@ -1230,7 +1230,7 @@
       padding-block: calc(0.95 * clamp(36px, 4.5vw, 56px));
     }
     .hero-inner { max-width: none; margin-left: 0; margin-right: 0; }
-    .hero-content { margin-left: calc(max(0px, calc((90vw - 1320px) / 2)) - 2.5vw); top: -48px; }
+    .hero-content { margin-left: max(0px, calc((90vw - 1320px) / 2 - 2.5vw - 50px)); top: -48px; }
     .hero h1 { max-width: none; font-size: clamp(34px, 3.5vw, 52px); }
     .hero h1 .hero-line { display: block; white-space: nowrap; }
   }
@@ -1311,7 +1311,7 @@
   }
 
   /* ── COLLEGE STUDENTS SECTION ── */
-  .campus { background: linear-gradient(180deg, var(--white) 0%, var(--purple-ultra) 100%); }
+  .campus { background: #FFFFFF; }
 
   .campus-inner {
     max-width: 1200px;
@@ -1565,7 +1565,7 @@
   /* Custom scrollbar */
   html { scroll-padding-top: 80px; }
   ::-webkit-scrollbar { width: 10px; height: 10px; }
-  ::-webkit-scrollbar-track { background: var(--purple-ultra); }
+  ::-webkit-scrollbar-track { background: #FFFFFF; }
   ::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, var(--purple-light), var(--purple-main));
     border-radius: 10px;
@@ -2146,7 +2146,7 @@
 
   /* ── DAILY JOBS section ── */
   .daily-jobs {
-    background: linear-gradient(180deg, var(--white) 0%, var(--purple-ultra) 100%);
+    background: #FFFFFF;
     padding: 80px 5%;
   }
   .daily-jobs .section-inner { max-width: 1200px; margin: 0 auto; }
@@ -3270,7 +3270,7 @@
       flex-direction: column;
       align-items: stretch;
       padding: 28px 4% 34px;
-      background: linear-gradient(180deg, var(--purple-ultra) 0%, #fff 100%);
+      background: #FFFFFF;
     }
 
     .hero-inner {
@@ -3348,6 +3348,27 @@
     #contact, #contact-form { scroll-margin-top: 76px; }
   }
 
+
+  html, body { background: #FFFFFF !important; }
+
+  .nav-toggle, .nav-overlay { display: none !important; }
+
+  /* ── SECURITY: white background version ── */
+  .security { background: #FFFFFF !important; border-top: 1px solid var(--gray-line); }
+  .security::before, .security::after { display: none !important; }
+  .security-text .section-eyebrow { color: var(--purple-main) !important; }
+  .security-text .section-title { color: var(--black) !important; }
+  .security-text .section-sub { color: var(--gray-mid) !important; }
+  .security-point p { color: var(--gray-dark) !important; }
+  .security-point-icon { background: var(--purple-ultra) !important; }
+  .security-point:hover { background: var(--gray-bg) !important; }
+  .security-point:hover .security-point-icon { background: var(--purple-pale) !important; }
+  .security-card { background: #FFFFFF !important; border: 1px solid var(--gray-line) !important; box-shadow: var(--shadow-card) !important; backdrop-filter: none !important; }
+  .security-card:hover { box-shadow: 0 12px 36px -12px rgba(0,0,0,0.12) !important; }
+  .security-card h3 { color: var(--black) !important; }
+  .security-card p { color: var(--gray-mid) !important; }
+  .security-feature { border-bottom-color: var(--gray-line) !important; }
+  .security-feature span { color: var(--gray-dark) !important; }
 </style>
 <style id="freelanzo-interaction-styles">
   .contact-form-row select {
@@ -3365,7 +3386,7 @@
   .form-submit { border: none; width: 100%; justify-content: center; }
   .form-status { min-height: 18px; margin-top: 10px; color: var(--purple-light); font-size: 12px; }
 
-  .route-pages { display: none; padding: 82px 5%; background: linear-gradient(180deg, #fff 0%, var(--purple-ultra) 100%); }
+  .route-pages { display: none; padding: 82px 5%; background: #FFFFFF; }
   .route-pages.is-active { display: block; }
   .route-pages .section-inner { max-width: 1120px; margin: 0 auto; }
   .mini-page { display: none; padding: 38px; border-radius: 26px; background: rgba(255,255,255,0.92); border: 1px solid var(--gray-line); box-shadow: 0 24px 70px -40px rgba(91,33,182,0.45); }
@@ -3729,9 +3750,6 @@
 </div>
 </li>
 </ul>
-<button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation menu" class="nav-toggle" onclick="toggleNav(this)">
-<span></span><span></span><span></span>
-</button>
 </div>
 <div class="nav-overlay" onclick="toggleNav(document.querySelector('.nav-toggle'))"></div>
 </nav>
@@ -3981,183 +3999,7 @@
 </div>
 </div>
 </section>
-<!-- ── FREELANCING JOBS PER DAY ── -->
-<section class="daily-jobs" id="daily-jobs"><a id="services" style="position:relative;top:-80px;"></a>
-<div class="section-inner">
-<div class="daily-header">
-<div>
-<span class="section-eyebrow">Live Day Jobs</span>
-<h2 class="section-title">Freelancing Jobs — Per Day Basis</h2>
-<p class="section-sub">Pick a day, pick a shift, get paid the same week. Browse fresh opportunities posted every morning across Bangalore.</p>
-</div>
-<div class="daily-cta-row">
-<span class="live-dot"></span>
-        Live · Updated every 15 min
-      </div>
-</div>
-<div aria-label="Filter jobs by day" class="day-strip" role="tablist">
-<button class="day-pill active" data-day="mon">Mon <span class="count">24</span></button>
-<button class="day-pill" data-day="tue">Tue <span class="count">18</span></button>
-<button class="day-pill" data-day="wed">Wed <span class="count">21</span></button>
-<button class="day-pill" data-day="thu">Thu <span class="count">19</span></button>
-<button class="day-pill" data-day="fri">Fri <span class="count">32</span></button>
-<button class="day-pill" data-day="sat">Sat <span class="count">48</span></button>
-<button class="day-pill" data-day="sun">Sun <span class="count">41</span></button>
-</div>
-<div class="jobs-grid" id="jobs-grid">
-<article class="job-card">
-<div class="job-top">
-<span class="job-cat retail">🛒 Retail</span>
-<span class="job-urgent">Urgent</span>
-</div>
-<h3 class="job-title">Brand Promoter — Phoenix Mall</h3>
-<div class="job-meta">
-<span><span class="ico">📍</span> Whitefield</span>
-<span><span class="ico">🕒</span> 10 AM – 8 PM</span>
-<span><span class="ico">🎯</span> No experience</span>
-</div>
-<div class="job-footer">
-<div class="job-pay">
-<strong>₹950</strong>
-<span>Per day</span>
-</div>
-<a aria-label="Apply for Brand Promoter — Phoenix Mall using the WhatsApp form" class="job-apply" data-apply-job="Brand Promoter — Phoenix Mall" data-apply-meta="📍 Whitefield · 📍 · 🕒 10 AM – 8 PM · 🕒 · 🎯 No experience · 🎯" data-apply-pay="₹950" href="#contact">Apply →</a>
-</div>
-</article>
-<article class="job-card">
-<div class="job-top">
-<span class="job-cat event">🎪 Event</span>
-</div>
-<h3 class="job-title">Event Crew — Tech Conference Setup</h3>
-<div class="job-meta">
-<span><span class="ico">📍</span> Koramangala</span>
-<span><span class="ico">🕒</span> 8 AM – 6 PM</span>
-<span><span class="ico">🎯</span> 1 day shift</span>
-</div>
-<div class="job-footer">
-<div class="job-pay">
-<strong>₹1,200</strong>
-<span>Per day</span>
-</div>
-<a aria-label="Apply for Event Crew — Tech Conference Setup using the WhatsApp form" class="job-apply" data-apply-job="Event Crew — Tech Conference Setup" data-apply-meta="📍 Koramangala · 📍 · 🕒 8 AM – 6 PM · 🕒 · 🎯 1 day shift · 🎯" data-apply-pay="₹1,200" href="#contact">Apply →</a>
-</div>
-</article>
-<article class="job-card">
-<div class="job-top">
-<span class="job-cat delivery">🚚 Delivery</span>
-<span class="job-urgent">Urgent</span>
-</div>
-<h3 class="job-title">Last-Mile Delivery Rider</h3>
-<div class="job-meta">
-<span><span class="ico">📍</span> HSR Layout</span>
-<span><span class="ico">🕒</span> Flexible</span>
-<span><span class="ico">🎯</span> Own bike</span>
-</div>
-<div class="job-footer">
-<div class="job-pay">
-<strong>₹850</strong>
-<span>Per day</span>
-</div>
-<a aria-label="Apply for Last-Mile Delivery Rider using the WhatsApp form" class="job-apply" data-apply-job="Last-Mile Delivery Rider" data-apply-meta="📍 HSR Layout · 📍 · 🕒 Flexible · 🕒 · 🎯 Own bike · 🎯" data-apply-pay="₹850" href="#contact">Apply →</a>
-</div>
-</article>
-<article class="job-card">
-<div class="job-top">
-<span class="job-cat restaurant">🍽 Restaurant</span>
-</div>
-<h3 class="job-title">Weekend Server — Café Chain</h3>
-<div class="job-meta">
-<span><span class="ico">📍</span> Indiranagar</span>
-<span><span class="ico">🕒</span> 11 AM – 9 PM</span>
-<span><span class="ico">🎯</span> Walk-in friendly</span>
-</div>
-<div class="job-footer">
-<div class="job-pay">
-<strong>₹700</strong>
-<span>Per day + tips</span>
-</div>
-<a aria-label="Apply for Weekend Server — Café Chain using the WhatsApp form" class="job-apply" data-apply-job="Weekend Server — Café Chain" data-apply-meta="📍 Indiranagar · 📍 · 🕒 11 AM – 9 PM · 🕒 · 🎯 Walk-in friendly · 🎯" data-apply-pay="₹700" href="#contact">Apply →</a>
-</div>
-</article>
-<article class="job-card">
-<div class="job-top">
-<span class="job-cat field">🗺 Field</span>
-</div>
-<h3 class="job-title">Survey Executive — Consumer Insights</h3>
-<div class="job-meta">
-<span><span class="ico">📍</span> Jayanagar</span>
-<span><span class="ico">🕒</span> 9 AM – 5 PM</span>
-<span><span class="ico">🎯</span> Communication</span>
-</div>
-<div class="job-footer">
-<div class="job-pay">
-<strong>₹1,100</strong>
-<span>Per day</span>
-</div>
-<a aria-label="Apply for Survey Executive — Consumer Insights using the WhatsApp form" class="job-apply" data-apply-job="Survey Executive — Consumer Insights" data-apply-meta="📍 Jayanagar · 📍 · 🕒 9 AM – 5 PM · 🕒 · 🎯 Communication · 🎯" data-apply-pay="₹1,100" href="#contact">Apply →</a>
-</div>
-</article>
-<article class="job-card">
-<div class="job-top">
-<span class="job-cat retail">🛒 Retail</span>
-</div>
-<h3 class="job-title">In-Store Demo Specialist</h3>
-<div class="job-meta">
-<span><span class="ico">📍</span> MG Road</span>
-<span><span class="ico">🕒</span> 12 PM – 9 PM</span>
-<span><span class="ico">🎯</span> Confident speaker</span>
-</div>
-<div class="job-footer">
-<div class="job-pay">
-<strong>₹1,000</strong>
-<span>Per day</span>
-</div>
-<a aria-label="Apply for In-Store Demo Specialist using the WhatsApp form" class="job-apply" data-apply-job="In-Store Demo Specialist" data-apply-meta="📍 MG Road · 📍 · 🕒 12 PM – 9 PM · 🕒 · 🎯 Confident speaker · 🎯" data-apply-pay="₹1,000" href="#contact">Apply →</a>
-</div>
-</article>
-<article class="job-card">
-<div class="job-top">
-<span class="job-cat event">🎪 Event</span>
-<span class="job-urgent">Urgent</span>
-</div>
-<h3 class="job-title">Brand Ambassador — Mall Activation</h3>
-<div class="job-meta">
-<span><span class="ico">📍</span> Mantri Square</span>
-<span><span class="ico">🕒</span> 11 AM – 8 PM</span>
-<span><span class="ico">🎯</span> Energetic</span>
-</div>
-<div class="job-footer">
-<div class="job-pay">
-<strong>₹1,400</strong>
-<span>Per day</span>
-</div>
-<a aria-label="Apply for Brand Ambassador — Mall Activation using the WhatsApp form" class="job-apply" data-apply-job="Brand Ambassador — Mall Activation" data-apply-meta="📍 Mantri Square · 📍 · 🕒 11 AM – 8 PM · 🕒 · 🎯 Energetic · 🎯" data-apply-pay="₹1,400" href="#contact">Apply →</a>
-</div>
-</article>
-<article class="job-card">
-<div class="job-top">
-<span class="job-cat support">🎧 Support</span>
-</div>
-<h3 class="job-title">Customer Support — Walk-in Helpdesk</h3>
-<div class="job-meta">
-<span><span class="ico">📍</span> Electronic City</span>
-<span><span class="ico">🕒</span> 10 AM – 7 PM</span>
-<span><span class="ico">🎯</span> Hindi + English</span>
-</div>
-<div class="job-footer">
-<div class="job-pay">
-<strong>₹900</strong>
-<span>Per day</span>
-</div>
-<a aria-label="Apply for Customer Support — Walk-in Helpdesk using the WhatsApp form" class="job-apply" data-apply-job="Customer Support — Walk-in Helpdesk" data-apply-meta="📍 Electronic City · 📍 · 🕒 10 AM – 7 PM · 🕒 · 🎯 Hindi + English · 🎯" data-apply-pay="₹900" href="#contact">Apply →</a>
-</div>
-</article>
-</div>
-<div class="daily-footer-cta">
-<a href="https://wa.me/919620055756?text=Hi%2C%20show%20me%20all%20day%20jobs%20available%20today" rel="noopener noreferrer" target="_blank">View all live day jobs →</a>
-</div>
-</div>
-</section>
+
 <!-- ── WHY CHOOSE ── -->
 <section class="why" id="why">
 <div class="section-inner">
@@ -4196,97 +4038,8 @@
 </div>
 </div>
 </section>
-<!-- ── TESTIMONIALS ── -->
-<section class="testimonials">
-<div class="section-inner">
-<span class="section-eyebrow">Testimonials</span>
-<h2 class="section-title">What Our Happy Clients Say</h2>
-<p class="section-sub">Trusted by businesses and students across Bangalore.</p>
-<div class="test-grid">
-<div class="test-card">
-<div class="test-stars">★★★★★</div>
-<p>"Freelanzo's exceptional part-time and weekend workforce solutions during peak periods like Black Friday and festive seasons has been a game-changer. Timely delivery of high-quality candidates who seamlessly integrate into our teams."</p>
-<div class="test-author">
-<div class="test-avatar">T</div>
-<div class="test-author-info">
-<strong>Tushar Vats</strong>
-<span>Manager, Talent Acquisition · Apparel Group</span>
-</div>
-</div>
-</div>
-<div class="test-card">
-<div class="test-stars">★★★★★</div>
-<p>"Freelanzo exceeded our expectations by providing highly skilled and dependable offline workers who seamlessly integrated into our operations for Foot-on-Field workforce solutions."</p>
-<div class="test-author">
-<div class="test-avatar">S</div>
-<div class="test-author-info">
-<strong>Samrat Chadha</strong>
-<span>Business Head · MSwipe</span>
-</div>
-</div>
-</div>
-<div class="test-card">
-<div class="test-stars">★★★★★</div>
-<p>"Freelanzo provided outstanding support on short notice, delivering top-notch trainers for our channel partners' onboarding, training, and activation. Their contributions have been remarkable."</p>
-<div class="test-author">
-<div class="test-avatar">M</div>
-<div class="test-author-info">
-<strong>Mahendra Sharma</strong>
-<span>Head of Training · PayNearby</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ── HOW IT WORKS ── -->
-<section class="how" id="how">
-<div class="section-inner">
-<span class="section-eyebrow">How It Works</span>
-<h2 class="section-title">Easy. Simple. Quick.</h2>
-<p class="section-sub">Getting started is as simple as 1, 2, 3!</p>
-<div class="how-grid">
-<div class="how-panel">
-<div class="how-panel-header">
-<div class="how-panel-icon">🏢</div>
-<h3>For Businesses</h3>
-</div>
-<div class="how-step">
-<div class="how-step-num">1</div>
-<div class="how-step-text"><strong>Sign Up as a Business</strong><p>Create your company profile in minutes — it's free to get started.</p></div>
-</div>
-<div class="how-step">
-<div class="how-step-num">2</div>
-<div class="how-step-text"><strong>Get Personalised Assistance</strong><p>Our dedicated executive will contact you to understand your specific requirements.</p></div>
-</div>
-<div class="how-step">
-<div class="how-step-num">3</div>
-<div class="how-step-text"><strong>Post Jobs &amp; Start Hiring</strong><p>Browse pre-verified talent and hire the right offline worker within 24–48 hours.</p></div>
-</div>
-<a class="btn-primary" href="#contact" data-lead-role="hire">Sign Up as Business</a>
-</div>
-<div class="how-panel">
-<div class="how-panel-header">
-<div class="how-panel-icon">🎓</div>
-<h3>For Students &amp; Job Seekers</h3>
-</div>
-<div class="how-step">
-<div class="how-step-num">1</div>
-<div class="how-step-text"><strong>Sign Up as a Job Seeker</strong><p>Create your free profile and showcase your skills, experience, and availability.</p></div>
-</div>
-<div class="how-step">
-<div class="how-step-num">2</div>
-<div class="how-step-text"><strong>Get Personalised Assistance</strong><p>Our executive connects you with the right opportunities matching your skills.</p></div>
-</div>
-<div class="how-step">
-<div class="how-step-num">3</div>
-<div class="how-step-text"><strong>Explore Day Jobs &amp; Start Earning</strong><p>Discover local day jobs near you, apply instantly, and start working and earning!</p></div>
-</div>
-<a class="btn-primary" href="#contact" data-lead-role="freelancer">Sign Up as Job Seeker</a>
-</div>
-</div>
-</div>
-</section>
+
+
 <section aria-live="polite" class="route-pages" id="route-pages">
 <div class="section-inner">
 <article class="mini-page" data-page="hire-workforce">
@@ -4467,11 +4220,11 @@
 <div class="footer-col">
 <h5>Business Solutions</h5>
 <ul>
-<li><a href="#services" onclick="goTab('retail')">Hire Retail Staff</a></li>
-<li><a href="#services" onclick="goTab('field')">Hire Field Staff</a></li>
-<li><a href="#services" onclick="goTab('events')">Hire Event Staff</a></li>
-<li><a href="#services" onclick="goTab('events')">Weekend Workforce</a></li>
-<li><a href="#how">Remote Workforce</a></li>
+<li><a href="#contact" onclick="goTab('retail')">Hire Retail Staff</a></li>
+<li><a href="#contact" onclick="goTab('field')">Hire Field Staff</a></li>
+<li><a href="#contact" onclick="goTab('events')">Hire Event Staff</a></li>
+<li><a href="#contact" onclick="goTab('events')">Weekend Workforce</a></li>
+<li><a href="#contact">Remote Workforce</a></li>
 </ul>
 </div>
 <div class="footer-col">
@@ -5510,7 +5263,7 @@ document.addEventListener('click',function(e){var b=e.target.closest('[data-pick
 @media (min-width: 901px) {
   .hero h1 { font-size: clamp(26px, 2.8vw, 42px) !important; }
   .hero .hero-eyebrow { position: relative; top: -22px; }
-  .hero-content { position: relative; left: -50px; }
+  .hero-content { position: relative; left: 0; }
 }
 </style>
 <style id="mobile-hero-fix">
@@ -5631,6 +5384,41 @@ document.addEventListener('click',function(e){var b=e.target.closest('[data-pick
 }
 @media (max-width: 420px) {
   .works-grid { gap: 10px !important; }
+}
+</style>
+<style id="contact-layout-fix">
+/* Contact: enquiry form + founder cards, organized at every width */
+.contact-inner.contact-team-layout { width: 100%; max-width: 1200px !important; margin-left: auto !important; margin-right: auto !important; box-sizing: border-box; }
+.contact-team-layout > * { min-width: 0; }
+.contact-team-layout .team-profile-card { box-sizing: border-box; }
+.contact-team-layout .team-profile-body h4 { font-size: clamp(20px, 2vw, 28px) !important; }
+
+/* Large laptops / desktops: Faiz | form | Altamash in one row */
+@media (min-width: 1101px) {
+  .contact-inner.contact-team-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 400px) minmax(0, 1fr) !important;
+    gap: 24px !important;
+    align-items: center !important;
+  }
+  .contact-team-layout .team-profile-cofounder { order: 1 !important; }
+  .contact-team-layout .contact-form-panel { order: 2 !important; width: 100% !important; max-width: none !important; justify-self: stretch !important; }
+  .contact-team-layout .team-profile-founder { order: 3 !important; }
+  .contact-team-layout .team-profile-card { width: 100% !important; max-width: none !important; justify-self: stretch !important; aspect-ratio: 1 / 1 !important; }
+  .contact-team-layout .team-profile-card img { width: 100% !important; height: 100% !important; aspect-ratio: 1 / 1 !important; max-height: none !important; object-fit: cover !important; object-position: center top !important; }
+}
+
+/* Small laptops / tablets: form on top, Faiz + Altamash side by side below */
+@media (min-width: 601px) and (max-width: 1100px) {
+  .contact-inner.contact-team-layout {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+    align-items: stretch !important;
+  }
+  .contact-team-layout .contact-form-panel { grid-column: 1 / -1 !important; order: 1 !important; width: 100% !important; max-width: 560px !important; justify-self: center !important; }
+  .contact-team-layout .team-profile-cofounder { order: 2 !important; }
+  .contact-team-layout .team-profile-founder { order: 3 !important; }
+  .contact-team-layout .team-profile-card { width: 100% !important; max-width: none !important; justify-self: stretch !important; aspect-ratio: 1 / 1 !important; }
+  .contact-team-layout .team-profile-card img { width: 100% !important; height: 100% !important; aspect-ratio: 1 / 1 !important; max-height: none !important; object-fit: cover !important; object-position: center top !important; }
 }
 </style>
 </body>
