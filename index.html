@@ -5179,12 +5179,12 @@
   function fit() {
     var h = document.querySelector('.hero h1');
     if (!h) return;
-    h.style.fontSize = '';
+    h.style.removeProperty('font-size');
     if (window.innerWidth > 900) return;
     var size = parseFloat(getComputedStyle(h).fontSize);
-    while (h.scrollWidth > h.clientWidth + 1 && size > 12) {
+    while (h.scrollWidth > h.clientWidth + 1 && size > 10) {
       size -= 0.5;
-      h.style.fontSize = size + 'px';
+      h.style.setProperty('font-size', size + 'px', 'important');
     }
   }
   window.addEventListener('load', fit);
@@ -5221,6 +5221,7 @@
   fit2();
 })();
 </script>
+<style id="hero-weight">.hero h1,.hero h1 .hero-line,.hero h1 .highlight{font-weight:900 !important}</style>
 <style id="amp-fix">.hero h1 .amp{font-family:'Inter','Segoe UI',Arial,sans-serif !important;font-weight:800 !important;letter-spacing:0 !important}</style>
 <style id="custom-additions">
 .contact-form-panel .form-note{margin-bottom:26px !important}
@@ -5309,7 +5310,8 @@ document.addEventListener('click',function(e){var b=e.target.closest('[data-pick
   .hero-content { min-width: 0; max-width: 100%; left: 0 !important; padding-block: 0 !important; margin-left: 0 !important; text-align: center; }
   .hero .hero-eyebrow, .hero-eyebrow.future { display: inline-flex; max-width: 100%; white-space: normal; text-align: center; font-size: 13px !important; padding: 8px 14px !important; margin-bottom: 20px !important; }
   .hero h1 { margin-left: 0 !important; margin-right: 0 !important; font-size: clamp(28px, 8.2vw, 42px) !important; line-height: 1.25 !important; text-wrap: balance; }
-  .hero h1 .hero-line { white-space: normal !important; }
+  .hero h1 .hero-line { white-space: normal !important; display: block; text-wrap: balance; }
+  .hero h1 .hero-line:first-child { white-space: nowrap !important; }
   .hero h1 .highlight { display: inline !important; }
   .hero .hero-sub { max-width: 100% !important; font-size: 14.5px !important; margin-left: auto; margin-right: auto; }
   .hero-ctas { width: 100%; }
