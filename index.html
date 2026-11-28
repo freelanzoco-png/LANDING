@@ -3785,7 +3785,7 @@
 <span class="hero-eyebrow-dot"></span>
         India's No.1 Gig Freelancing Platform
       </div>
-<h1><span class="hero-line">Hire Gig <span class="highlight">Freelancers</span></span> <span class="hero-line">for Events</span> <span class="hero-line">and Find Day Jobs</span></h1>
+<h1><span class="hero-line">Hire Gig <span class="highlight">Freelancer</span></span> <span class="hero-line">For Events <span class="amp">&amp;</span> Find Day Jobs</span></h1>
 <p class="hero-sub">Hire Temporary Gig Freelancers For Events, Exhibitions, Retail Stores, Warehouses etc. And Find Temporary jobs like Event Jobs or Day Jobs or Weekend Jobs On FREELANZO</p>
 <div class="hero-ctas">
 <a class="btn-hero-primary" href="#contact" data-lead-role="hire">Hire Gig Freelancer →</a>
@@ -5193,6 +5193,35 @@
   fit();
 })();
 </script>
+<script>
+/* Desktop: keep the hero headline on 2 lines by shrinking only if a line would run into the photo */
+(function () {
+  function fit2() {
+    var h = document.querySelector('.hero h1');
+    if (!h || window.innerWidth <= 900) return;
+    h.style.removeProperty('font-size');
+    var size = parseFloat(getComputedStyle(h).fontSize);
+    var limit = window.innerWidth * 0.565 - h.getBoundingClientRect().left;
+    function widest() {
+      var w = 0;
+      h.querySelectorAll('.hero-line').forEach(function (l) {
+        var r = document.createRange(); r.selectNodeContents(l);
+        w = Math.max(w, r.getBoundingClientRect().width);
+      });
+      return w;
+    }
+    while (widest() > limit && size > 20) {
+      size -= 0.5;
+      h.style.setProperty('font-size', size + 'px', 'important');
+    }
+  }
+  window.addEventListener('load', fit2);
+  window.addEventListener('resize', fit2);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit2);
+  fit2();
+})();
+</script>
+<style id="amp-fix">.hero h1 .amp{font-family:'Inter','Segoe UI',Arial,sans-serif !important;font-weight:800 !important;letter-spacing:0 !important}</style>
 <style id="custom-additions">
 .contact-form-panel .form-note{margin-bottom:26px !important}
 .role-label{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 10px !important}
@@ -5263,7 +5292,12 @@ document.addEventListener('click',function(e){var b=e.target.closest('[data-pick
 </script>
 <style id="hero-tweaks">
 @media (min-width: 901px) {
-  .hero h1 { font-size: clamp(26px, 2.8vw, 42px) !important; }
+  .hero h1 { font-size: clamp(32px, 3.6vw, 56px) !important; }
+  html body .hero h1 { max-width: none !important; }
+  .hero h1 .amp { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; font-weight: 800; letter-spacing: 0; }
+  html body .hero h1 .hero-line { white-space: nowrap !important; }
+  /* headline is now 2 lines: keep the hero as tall as before so the photo isn't cropped */
+  .hero-content { padding-bottom: calc(0.95 * clamp(36px, 4.5vw, 56px) + 4.6vw) !important; }
   .hero .hero-eyebrow { position: relative; top: -22px; }
   .hero-content { position: relative; left: 0; }
 }
@@ -5274,7 +5308,7 @@ document.addEventListener('click',function(e){var b=e.target.closest('[data-pick
   .hero-inner { grid-template-columns: minmax(0,1fr) !important; }
   .hero-content { min-width: 0; max-width: 100%; left: 0 !important; padding-block: 0 !important; margin-left: 0 !important; text-align: center; }
   .hero .hero-eyebrow, .hero-eyebrow.future { display: inline-flex; max-width: 100%; white-space: normal; text-align: center; font-size: 13px !important; padding: 8px 14px !important; margin-bottom: 20px !important; }
-  .hero h1 { margin-left: 0 !important; margin-right: 0 !important; font-size: clamp(24px, 7.2vw, 36px) !important; line-height: 1.25 !important; text-wrap: balance; }
+  .hero h1 { margin-left: 0 !important; margin-right: 0 !important; font-size: clamp(28px, 8.2vw, 42px) !important; line-height: 1.25 !important; text-wrap: balance; }
   .hero h1 .hero-line { white-space: normal !important; }
   .hero h1 .highlight { display: inline !important; }
   .hero .hero-sub { max-width: 100% !important; font-size: 14.5px !important; margin-left: auto; margin-right: auto; }
@@ -5488,7 +5522,7 @@ document.addEventListener('click',function(e){var b=e.target.closest('[data-pick
   /* Hero: event-staff photo (banner removed) on the right, headline resized to sit beside it */
   @media (min-width: 901px) {
     html body .hero .hero-bg-layer img {
-      top: auto; bottom: 0; right: -8%;
+      top: auto; bottom: 6%; right: -8%;
       transform: none;
       image-rendering: auto;
       border-radius: 0;
