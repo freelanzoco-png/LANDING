@@ -5182,7 +5182,15 @@
     h.style.removeProperty('font-size');
     if (window.innerWidth > 900) return;
     var size = parseFloat(getComputedStyle(h).fontSize);
-    while (h.scrollWidth > h.clientWidth + 1 && size > 10) {
+    function widest() {
+      var w = 0;
+      h.querySelectorAll('.hero-line').forEach(function (l) {
+        var r = document.createRange(); r.selectNodeContents(l);
+        w = Math.max(w, r.getBoundingClientRect().width);
+      });
+      return w;
+    }
+    while ((widest() > h.clientWidth * 0.97 || h.scrollWidth > h.clientWidth + 1) && size > 10) {
       size -= 0.5;
       h.style.setProperty('font-size', size + 'px', 'important');
     }
@@ -5191,6 +5199,8 @@
   window.addEventListener('resize', fit);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
   fit();
+  if (document.fonts && document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', fit);
+  setTimeout(fit, 600); setTimeout(fit, 1800); setTimeout(fit, 4000);
 })();
 </script>
 <script>
@@ -5337,7 +5347,7 @@ document.addEventListener('click',function(e){var b=e.target.closest('[data-pick
   .hero-inner { grid-template-columns: minmax(0,1fr) !important; }
   .hero-content { min-width: 0; max-width: 100%; left: 0 !important; padding-block: 0 !important; margin-left: 0 !important; text-align: center; }
   .hero .hero-eyebrow, .hero-eyebrow.future { display: inline-flex; max-width: 100%; white-space: normal; text-align: center; font-size: 13px !important; padding: 8px 14px !important; margin-bottom: 20px !important; }
-  .hero h1 { margin-left: 0 !important; margin-right: 0 !important; font-size: clamp(28px, 8.2vw, 42px) !important; line-height: 1.25 !important; text-wrap: balance; }
+  .hero h1 { margin-left: -10px !important; margin-right: -10px !important; font-size: clamp(18px, 7vw, 33px) !important; line-height: 1.25 !important; text-wrap: balance; }
   .hero h1 .hero-line { white-space: normal !important; display: block; text-wrap: balance; }
   .hero h1 .hero-line:first-child { white-space: nowrap !important; }
   .hero h1 .highlight { display: inline !important; }
