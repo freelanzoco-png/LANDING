@@ -5304,7 +5304,7 @@ document.addEventListener('click',function(e){var b=e.target.closest('[data-pick
   .hero h1 .amp { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; font-weight: 800; letter-spacing: 0; }
   html body .hero h1 .hero-line { white-space: nowrap !important; }
   /* headline is now 2 lines: keep the hero as tall as before so the photo isn't cropped */
-  .hero-content { padding-bottom: calc(0.95 * clamp(36px, 4.5vw, 56px) + 4.6vw - 22px) !important; }
+  .hero-content { padding-bottom: 0 !important; }
   .hero .hero-stats { position: relative; top: 40px; }
   .hero .hero-ctas { position: relative; top: 20px; }
   .hero .hero-eyebrow { position: relative; top: -22px; }
@@ -5532,7 +5532,7 @@ document.addEventListener('click',function(e){var b=e.target.closest('[data-pick
   /* Hero: event-staff photo (banner removed) on the right, headline resized to sit beside it */
   @media (min-width: 901px) {
     html body .hero .hero-bg-layer img {
-      top: auto; bottom: 0%; right: -8%;
+      top: auto; bottom: -26px; right: -8%;
       transform: none;
       image-rendering: auto;
       border-radius: 0;
